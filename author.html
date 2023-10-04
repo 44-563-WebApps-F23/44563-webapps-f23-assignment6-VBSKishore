@@ -5,6 +5,10 @@
     </head>
     <body>
        <h1>Author entry Kishore</h1>
+       <div class="container">
+        <img  src="varanasi.jpeg" id="image" alt="img" height="100px" width="100px" onclick="selectImage()">
+       </div>
+       
        <form>
         <label for="Author">The hidden author name</label>
         <input type="password" id="Author" value="Dickens">
@@ -12,6 +16,7 @@
         <input type="text" id="Author1">
         <input type="button" value="Check the guess" onclick="checkAuthor()">
         <div >Score:<span id="script"></span></div>
+        <input type="button"  value="Click Me to Change Image" onclick="selectImage()">
     </form>
     <script>
         var good=0;
@@ -33,6 +38,31 @@
             var score=document.getElementById("script");
             score.textContent=good +"/" + (oops);
         }
+        let useImage=1;
+        function selectImage(){
+            const imageElement=document.getElementById("image");
+            switch(useImage)
+            {
+                case 1:
+                imageElement.src="utica.jpeg";
+
+                useImage=2;
+                break;
+                case 2:
+                    imageElement.src="trivandram.jpeg";
+                    useImage=3;
+                    break;
+                case 3:
+                    imageElement.src="varanasi.jpeg";
+                    break;
+                default:
+                     break;
+
+
+
+
+            }
+         }
     </script>
     </body>
 </html>

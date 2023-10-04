@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cruise</title>
+    </head>
+ 
+<body>
+
+<h1>Kishore goes on a cruise</h1>
+<form>
+    <input type="checkbox"  id="check1" value="True">
+    <label for="check">Shares Cabin</label>
+    <input type="checkbox" id="check2" value="True">
+    <label for="check2">Breakfast</label>
+    <input type="checkbox" id="check3" value="False">
+    <label for="check3">Pool Pass</label>
+    <input type="button" onclick="selectCruise()" value="Select a cruise">
+</form>
+<p id="result1"></p>
+
+
+<form>
+    <label for="form1_age">What is your age </label>
+    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+
+    <label for="form1_nick">What is your nickname </label>
+    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+    <input type="button" onclick="resolveForm()" value="Get values from form">
+</form>
+<form>
+    <label for="text">Enter the number of days</label>
+    <input type="text" id="text" value="days">
+    <label for="text2">Enter price</label>
+    <input type="text id=text2">
+    <input type="button" value="Update the cruise" onclick="updateCruise()">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function resolveForm (){
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+my_cruise={};
+function selectCruise(){
+    cabin=document.getElementById("check1").checked;
+    Breakfast=document.getElementById("check2").checked;
+    pool=document.getElementById("check3").checked;
+    my_cruise={cabin,Breakfast,pool};
+    const result=document.getElementById("result1");
+    result.innerHTML='Selected Cruise:'+JSON.stringify(my_cruise);
+}
+function updateCruise(){
+    const a=document.getElementById("text").value;
+    const b=document.getElementById("text2").value;
+    my_cruise=a;
+    my_cruise=b;
+    const result2=document.getElementById("result1");
+    result2.innerHTML=JSON.stringify(my_cruise);
+
+}
+
+</script>
+
+</body>
+</html> 
