@@ -2,7 +2,7 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 hostedAt[Link](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-VBSKishore/)
-hostedAt[author.html](author.html)
-hostedAt[tips.html](https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-VBSKishore/blob/main/tips.html)
-hostedAt[cruise.html](cruise.html)
+hostedAt[author.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-VBSKishore/author.html)
+hostedAt[tips.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-VBSKishore/tips.html)
+hostedAt[cruise.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-VBSKishore/cruise.html)
 
