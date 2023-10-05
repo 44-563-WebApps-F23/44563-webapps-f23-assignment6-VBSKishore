@@ -4,7 +4,7 @@
         <title>Cruise</title>
     </head>
  
-<body>
+<body style="background-color: cyan;">
 
 <h1>Kishore goes on a cruise</h1>
 <form>
@@ -14,12 +14,12 @@
     <label for="check2">Breakfast</label>
     <input type="checkbox" id="check3" value="False">
     <label for="check3">Pool Pass</label>
-    <input type="button" onclick="selectCruise()" value="Select a cruise">
+    <input type="button" onclick="selectCruise()" value="Select a cruise" style="background-color: red;color:magenta">
 </form>
 <p id="result1"></p>
 
 
-<form>
+<form style="text-decoration: dotted;color:azure">
     <label for="form1_age">What is your age </label>
     <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
 
@@ -28,11 +28,11 @@
 
     <input type="button" onclick="resolveForm()" value="Get values from form">
 </form>
-<form>
-    <label for="text">Enter the number of days</label>
-    <input type="text" id="text" value="days">
-    <label for="text2">Enter price</label>
-    <input type="text id=text2">
+<form style="text-decoration: dashed; center;color:blue">
+    <label for="day">Enter the number of days</label>
+    <input type="text" id="day" value="days">
+    <label for="pri">Enter price</label>
+    <input type="text" id="pri">
     <input type="button" value="Update the cruise" onclick="updateCruise()">
 </form>
 
@@ -41,7 +41,7 @@
 
 <script> 
 
-function resolveForm (){
+function resolveForm(){
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
     nick = document.getElementById("form1_nick").value
@@ -64,12 +64,11 @@ function selectCruise(){
     result.innerHTML='Selected Cruise:'+JSON.stringify(my_cruise);
 }
 function updateCruise(){
-    const a=document.getElementById("text").value;
-    const b=document.getElementById("text2").value;
-    my_cruise=a;
-    my_cruise=b;
-    const result2=document.getElementById("result1");
-    result2.innerHTML=JSON.stringify(my_cruise);
+    let a=document.getElementById("day").value;
+    let b=document.getElementById("pri").value;
+    my_cruise.days=a;
+    my_cruise.price=b;
+    document.getElementById("result").innerHTML=JSON.stringify(my_cruise);
 
 }
 

@@ -8,7 +8,7 @@
 
 
 
-    <form>
+    <form style="color:red">
         <label for="baseAmount">Enter base amount:</label>
         <input type="number" id="baseAmount" value="50"><br><br>
 
@@ -18,7 +18,7 @@
         <input type="button" value="Show tip" onclick="tips()"><br><br>
     </form>
     <div id="result"></div>
-    <form>
+    <form style="color:black;background-color:orange;">
         <lable for="sum">sum</lable>
         <input type="radio" id="sum" value="sum" name="operand">
         <lable for="difference">diff</lable>
@@ -35,7 +35,7 @@
         function tips() {
             var base = parseFloat(document.getElementById("baseAmount").value);
             var tip = parseFloat(document.getElementById("tipPercent").value);
-            var toShow = "";
+            var toShow ="";
 
             for (var i = 0; i < 5; i++) {
                
