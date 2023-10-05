@@ -17,8 +17,6 @@
         <input type="button" value="Check the guess" onclick="checkAuthor()">
         <div >Score:<span id="script"></span></div>
         <input type="button"  value="Click Me to Change Image" onclick="selectImage()">
-        <div>Good Score:<span id="good"></span></div>
-        <div>Oops Score:<span id="oops"></span></div>
     </form>
     <script>
         var good=0;
@@ -38,11 +36,12 @@
                 {
                     alert("Sorry,ran out of guesses")
                 }
+                else{
                 oops++;
-                alert("Sorry");
+                alert("Sorry");}
             }
-            document.getElementById("good").innerHTML=good;
-            document.getElementById("Oops").innerHTML=oops;
+            var score=document.getElementById("script");
+            score.textContent=good +"/" + (oops);
         }
         let useImage=1;
         function selectImage(){
